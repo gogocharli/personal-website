@@ -23,6 +23,10 @@ importers:
       sharp:
         specifier: ^0.34.2
         version: 0.34.2
+    devDependencies:
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
 
 packages:
 
