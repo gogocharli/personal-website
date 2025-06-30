@@ -1,5 +1,5 @@
 :root {
-  --color-white: #fdfcfc;
+  --color-white: #fcfaf7;
   --color-neutral-100: #eee7ea;
   --color-neutral-200: #dad3d6;
   --color-neutral-300: #90898c;
@@ -227,7 +227,7 @@ body {
   color: var(--color-black);
   font-size: 1rem;
   font-variation-settings: 'wght' 400, 'ital' 0;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 main {
   width: 720px;
@@ -249,15 +249,19 @@ h6 {
 h1 {
   font-size: 1.25rem;
   font-variation-settings: 'wght' 600;
+  margin-block: 2rem;
 }
 h2 {
   font-size: 1.15rem;
+  margin-block: 1.25rem 1rem;
 }
 h3 {
   font-size: 1.15rem;
 }
 h4 {
   font-size: 1rem;
+  text-decoration: underline;
+  color: var(--color-neutral-400);
 }
 h5 {
   font-size: 1rem;
@@ -265,12 +269,6 @@ h5 {
 strong,
 b {
   font-weight: 700;
-}
-a {
-  color: var(--accent);
-}
-a:hover {
-  color: var(--accent);
 }
 p {
   margin-bottom: 1em;
@@ -303,6 +301,24 @@ pre {
 }
 pre > code {
   all: unset;
+}
+
+a:link {
+  color: var(--color-cobalt-300);
+}
+
+a:visited {
+  color: var(--color-amethyst-300);
+}
+
+a:hover,
+a:focus-visible {
+  background-color: var(--color-cobalt-300);
+  color: var(--color-white);
+}
+
+a:active {
+  color: var(--color-neutral-400);
 }
 
 .sr-only {

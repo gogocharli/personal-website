@@ -1,49 +1,237 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<html lang='en'>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main>
+      <h1>Charles <span class='ital'>de Mount</span> Yahouédéou</h1>
+      <p>
+        Hey there! I am an award-winning designer and software developer with <span
+          class='circled'>5</span
+        > years of experience building on my own, with agencies, and fast-paced startup
+        environments.
+      </p>
+      <section>
+        <h2>I've worked at</h2>
+        <details name='work'>
+          <summary role='heading'
+            ><h3>
+              SuperHi
+              <span class='timeline'
+                ><time datetime='2022-05'>05/22</time>&#8211;<time
+                  datetime='2024-12'>12/24</time
+                ></span
+              >
+            </h3></summary
+          >
+          <div class='details__content'>
+            <p>
+              Frontend Engineer <span class='sprite'
+                ><img
+                  class='mario-sprite'
+                  src='/mario-sprite.png'
+                  alt=''
+                /></span
+              >
+              <span class='promotion'>Senior Software Engineer</span>
+            </p>
+            <p>
+              I spent a great couple of years (May 2022 - Dec 2024) at SuperHi,
+              a high-growth startup, climbing from Front-End to Senior Software
+              Developer. I got to build and document a flexible design system
+              that helped keep things consistent across tons of sites. A big
+              focus was also making our own engineering team faster. I helped
+              improve workflows with better testing, logging, and documentation,
+              which even sped up how quickly we could launch new courses (from
+              months to just 2 weeks!). On the Senior side, I played a key role
+              in projects that really moved the needle, boosting revenue by 22%
+              with new sites and improving user retention by 10% by tackling UI
+              issues. Plus, I optimized performance, cutting load times by 40%,
+              and even prototyped fun stuff like AI-powered learning tools.
+            </p>
+
+            <section>
+              <h4>Projects</h4>
+              <ul>
+                <li>
+                  <a
+                    target='_blank'
+                    rel='noopener'
+                    href='https://dribbble.com/shots/25309216-SuperHi-Platform-and-Marketing-Site-Redesign'
+                    >SuperHi Platform Redesign</a
+                  >
+                </li>
+                <li>
+                  <a
+                    target='_blank'
+                    rel='noopener'
+                    href='https://dribbble.com/shots/25309292-SuperHi-Plus'
+                    >SuperHi Plus</a
+                  >
+                </li>
+                <li>
+                  <a target='_blank' rel='noopener' href='bounties.sh'
+                    >Bounties</a
+                  >
+                </li>
+                <li>HiOS Design System</li>
+                <li>LLM Tutor VSCode Extension</li>
+              </ul>
+            </section>
+
+            <blockquote
+              cite='https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/'
+            >
+              <p>
+                I would highly recommend Charles to any team looking for a
+                software engineer who goes beyond writing code — someone who
+                truly understands how technology can create delightful,
+                accessible and memorable experiences.
+              </p>
+              <cite>&#8212;Panna Nyeste</cite>, <cite
+                >Head of Design at SuperHi</cite
+              >
+            </blockquote>
+          </div>
+        </details>
+        <details name='work'>
+          <summary role='heading'
+            ><h3>
+              Vercel <span class='timeline'
+                ><time datetime='2021-09'>09/21</time>&#8211;<time
+                  datetime='2022-05'>05/22</time
+                ></span
+              >
+            </h3></summary
+          >
+        </details>
+        <details name='work'>
+          <summary role='heading'
+            ><h3>
+              Lyncxs <span class='timeline'
+                ><time datetime='2020-04'>04/20</time>&#8211;<time
+                  datetime='2021-03'>03/21</time
+                ></span
+              >
+            </h3>
+          </summary>
+        </details>
+        <details name='work'>
+          <summary role='heading'
+            ><h3>Freelance Creative Technologist</h3>
+          </summary>
+        </details>
+      </section>
+      <section>
+        <h2>I've built</h2>
+        <ul>
+          <li><h3>Raynab: An AI powered extension for YNAB</h3></li>
+          <li>
+            <h3>
+              Enigma: A recreation of the Enigma Machine using React hooks
+            </h3>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>I love</h2>
+        <ul>
+          <li>CityPop</li>
+          <li>Bass riffs</li>
+          <li>Rap bars</li>
+          <li>Ok, music in general</li>
+          <li>Serifs</li>
+          <li>Computers</li>
+          <li>Cycling</li>
+          <li>Cooking</li>
+          <li>Fashion</li>
+          <li>Chrono Trigger</li>
+          <li>Axelle</li>
+        </ul>
+      </section>
+    </main>
+
+    <canvas id='shader'></canvas>
+  </body><style>
+    .ital {
+      font-style: italic;
+    }
+
+    .circled {
+      font-feature-settings: 'ss03';
+      font-size: 1.6rem;
+      color: var(--color-amethyst-400);
+      line-height: 1;
+    }
+
+    h2 {
+      /* font-size: 1.25rem; */
+      font-variation-settings:
+        'wght' 400,
+        'ital' 1;
+      text-decoration: underline;
+    }
+
+    h3 {
+      font-variation-settings:
+        'wght' 600,
+        'ital' 0;
+    }
+
+    details {
+      font-feature-settings: 'calt';
+    }
+
+    summary h3 {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .timeline {
+      font-variation-settings:
+        'wght' 400,
+        'ital' 1;
+      border: 1px solid currentColor;
+      padding: 0.25em 0.5em;
+      border-radius: 1em;
+      font-size: 0.75em;
+    }
+
+    h3 time {
+      font-feature-settings: 'ss04';
+    }
+
+    .promotion {
+      font-variation-settings:
+        'wght' 600,
+        'ital' 0;
+    }
+
+    .mario-sprite {
+      display: inline-block;
+      transform: translateY(-4px);
+      height: 1em;
+    }
+
+    .details__content {
+      margin-bottom: 1.5rem;
+    }
+
+    a[target='_blank']::after {
+      content: '\2197';
+    }
+
+    blockquote {
+      margin: 1rem 2rem;
+      padding: 1em 2em;
+      border: 2px dashed var(--color-neutral-400);
+    }
+  </style>
 </html>
