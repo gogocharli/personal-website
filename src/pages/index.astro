@@ -17,9 +17,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         > years of experience building on my own, with agencies, and fast-paced startup
         environments.
       </p>
-      <section>
+      <section class='work-details'>
         <h2>I've worked at</h2>
-        <details name='work'>
+        <details name='work' data-title='SuperHi'>
           <summary role='heading'
             ><h3>
               SuperHi
@@ -58,46 +58,140 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
             <section>
               <h4>Projects</h4>
-              <ul>
-                <li>
-                  <a
-                    target='_blank'
-                    rel='noopener'
-                    href='https://dribbble.com/shots/25309216-SuperHi-Platform-and-Marketing-Site-Redesign'
-                    >SuperHi Platform Redesign</a
-                  >
+              <ul class='project-list'>
+                <li class='project-item'>
+                  <div>
+                    <h5 class='project-title'>
+                      <a
+                        target='_blank'
+                        rel='noopener'
+                        href='https://dribbble.com/shots/25309216-SuperHi-Platform-and-Marketing-Site-Redesign'
+                        >SuperHi Platform Redesign</a
+                      >
+                    </h5>
+                    <p class='project-description'>
+                      Spearheaded a platform redesign at SuperHi that drove a
+                      22% increase in conversion and a 209% customer growth for
+                      over 50,000 users. I led the technical execution, which
+                      involved a full-stack migration to Next.js 14,
+                      implementing a new, award-winning front-end, and
+                      redesigning core content, the dashboard, and the video
+                      player experience.
+                    </p>
+                    <div class='asset-grid'>
+                      <video autoplay loop muted>
+                        <source
+                          src='/videos/sh-home-hero-load.mp4'
+                          type='video/mp4'
+                        />
+                      </video>
+                      <video autoplay loop muted>
+                        <source
+                          src='/videos/sh-homepage-about-hero.mp4'
+                          type='video/mp4'
+                        />
+                      </video>
+                      <video autoplay loop muted>
+                        <source
+                          src='/videos/sh-homepage-testimonial.mp4'
+                          type='video/mp4'
+                        />
+                      </video>
+                      <video autoplay loop muted>
+                        <source
+                          src='/videos/sh-homepage-footer.mp4'
+                          type='video/mp4'
+                        />
+                      </video>
+                    </div>
+                  </div>
                 </li>
-                <li>
-                  <a
-                    target='_blank'
-                    rel='noopener'
-                    href='https://dribbble.com/shots/25309292-SuperHi-Plus'
-                    >SuperHi Plus</a
-                  >
+                <li class='project-item'>
+                  <div>
+                    <h5 class='project-title'>
+                      <a
+                        target='_blank'
+                        rel='noopener'
+                        href='https://dribbble.com/shots/25309292-SuperHi-Plus'
+                        >SuperHi Plus</a
+                      >
+                    </h5>
+                    <p class='project-description'>
+                      SuperHi Plus is a program by SuperHi, making it easier to
+                      recruit promising creatives from around the world and
+                      mentor them to become educators. I drove a 47% increase in
+                      traffic to SuperHi's main site through the successful
+                      launch of the SuperHi Plus sub-brand. As a Frontend
+                      Engineer, I developed the program's engaging and
+                      interactive website, focusing on motion and performance to
+                      create an immersive user experience. The launch exceeded
+                      all targets, attracting over 14,000 visitors and doubling
+                      the expected number of applicants.
+                    </p>
+                    <div class='asset-grid'>
+                      <video autoplay loop muted>
+                        <source src='/videos/sh-plus.mp4' type='video/mp4' />
+                      </video>
+                      <video autoplay loop muted>
+                        <source
+                          src='/videos/sh-plus-courses.mp4'
+                          type='video/mp4'
+                        />
+                      </video>
+                      <video autoplay loop muted>
+                        <source
+                          src='/videos/sh-plus-explore-section.mp4'
+                          type='video/mp4'
+                        />
+                      </video>
+                      <video autoplay loop muted>
+                        <source
+                          src='/videos/sh-plus-quote-section.mp4'
+                          type='video/mp4'
+                        />
+                      </video>
+                    </div>
+                  </div>
                 </li>
-                <li>
-                  <a target='_blank' rel='noopener' href='bounties.sh'
-                    >Bounties</a
-                  >
+                <li class='project-item'>
+                  <div>
+                    <h5 class='project-title'>
+                      <a target='_blank' rel='noopener' href='bounties.sh'
+                        >Bounties</a
+                      >
+                    </h5>
+                    <p>
+                      Bounties was a SuperHi platform designed to make it easier
+                      for freelancers to find creative projects and get paid
+                      transparently. Based on Ethereum smart contracts, clients
+                      would put their project funds in escrow which would then
+                      be used to pay creators after their work was completed.
+                    </p>
+                    <div class='asset-grid'>
+                      <video autoplay loop muted>
+                        <source
+                          src='/videos/bounties-homepage-1.mp4'
+                          type='video/mp4'
+                        />
+                      </video>
+                      <video autoplay loop muted>
+                        <source
+                          src='/videos/bounties-homepage-2.mp4'
+                          type='video/mp4'
+                        />
+                      </video>
+                      <video autoplay loop muted>
+                        <source
+                          src='/videos/bounties-homepage-3.mp4'
+                          type='video/mp4'
+                        />
+                      </video>
+                    </div>
+                  </div>
                 </li>
-                <li>HiOS Design System</li>
-                <li>LLM Tutor VSCode Extension</li>
+                <li class='project-item'>And more…</li>
               </ul>
             </section>
-
-            <blockquote
-              cite='https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/'
-            >
-              <p>
-                I would highly recommend Charles to any team looking for a
-                software engineer who goes beyond writing code — someone who
-                truly understands how technology can create delightful,
-                accessible and memorable experiences.
-              </p>
-              <cite>&#8212;Panna Nyeste</cite>, <cite
-                >Head of Design at SuperHi</cite
-              >
-            </blockquote>
           </div>
         </details>
         <details name='work'>
@@ -155,83 +249,138 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           <li>Axelle</li>
         </ul>
       </section>
+
+      <section class='recommendations'>
+        <blockquote
+          cite='https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/'
+        >
+          <p>
+            I would highly recommend Charles to any team looking for a software
+            engineer who goes beyond writing code — someone who truly
+            understands how technology can create delightful, accessible and
+            memorable experiences(<a
+              href='https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/'
+              >&hellip;</a
+            >)
+          </p>
+          <cite>&#8212;Panna Nyeste</cite>, <cite
+            >Head of Design at SuperHi</cite
+          >
+        </blockquote>
+      </section>
     </main>
 
     <canvas id='shader'></canvas>
-  </body><style>
-    .ital {
-      font-style: italic;
-    }
+    <style>
+      .ital {
+        font-style: italic;
+      }
 
-    .circled {
-      font-feature-settings: 'ss03';
-      font-size: 1.6rem;
-      color: var(--color-amethyst-400);
-      line-height: 1;
-    }
+      .circled {
+        font-feature-settings: 'ss03';
+        font-size: 1.6rem;
+        color: var(--color-amethyst-400);
+        line-height: 1;
+      }
 
-    h2 {
-      /* font-size: 1.25rem; */
-      font-variation-settings:
-        'wght' 400,
-        'ital' 1;
-      text-decoration: underline;
-    }
+      h2 {
+        /* font-size: 1.25rem; */
+        font-variation-settings:
+          'wght' 400,
+          'ital' 1;
+        text-decoration: underline;
+      }
 
-    h3 {
-      font-variation-settings:
-        'wght' 600,
-        'ital' 0;
-    }
+      h3 {
+        font-variation-settings:
+          'wght' 600,
+          'ital' 0;
+      }
 
-    details {
-      font-feature-settings: 'calt';
-    }
+      details {
+        font-feature-settings: 'calt';
+      }
 
-    summary h3 {
-      display: inline-flex;
-      gap: 0.5rem;
-      align-items: center;
-    }
+      summary h3 {
+        display: inline-flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
 
-    .timeline {
-      font-variation-settings:
-        'wght' 400,
-        'ital' 1;
-      border: 1px solid currentColor;
-      padding: 0.25em 0.5em;
-      border-radius: 1em;
-      font-size: 0.75em;
-    }
+      .timeline {
+        font-variation-settings:
+          'wght' 400,
+          'ital' 1;
+        border: 1px solid currentColor;
+        padding: 0.25em 0.5em;
+        border-radius: 1em;
+        font-size: 0.75em;
+      }
 
-    h3 time {
-      font-feature-settings: 'ss04';
-    }
+      h3 time {
+        font-feature-settings: 'ss04';
+      }
 
-    .promotion {
-      font-variation-settings:
-        'wght' 600,
-        'ital' 0;
-    }
+      h4 {
+        text-transform: uppercase;
+        font-variation-settings:
+          'wght' 200,
+          'ital' 0;
+        text-decoration: none;
+        text-align: center;
+        margin-block: 1rem;
+      }
 
-    .mario-sprite {
-      display: inline-block;
-      transform: translateY(-4px);
-      height: 1em;
-    }
+      .promotion {
+        font-variation-settings:
+          'wght' 600,
+          'ital' 0;
+      }
 
-    .details__content {
-      margin-bottom: 1.5rem;
-    }
+      .mario-sprite {
+        display: inline-block;
+        transform: translateY(-4px);
+        height: 1em;
+      }
 
-    a[target='_blank']::after {
-      content: '\2197';
-    }
+      .details__content {
+        margin-bottom: 1.5rem;
+      }
 
-    blockquote {
-      margin: 1rem 2rem;
-      padding: 1em 2em;
-      border: 2px dashed var(--color-neutral-400);
-    }
-  </style>
+      a[target='_blank']::after {
+        content: '\2197';
+      }
+
+      blockquote {
+        margin: 1rem 2rem;
+        padding: 1em 2em;
+        border: 2px dashed var(--color-neutral-400);
+      }
+
+      .asset-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .asset-grid video,
+      .asset-grid img {
+        border-radius: 0.25rem;
+        transition: transform 0.25s ease-in-out;
+      }
+
+      .asset-grid video:hover,
+      .asset-grid img:hover {
+        transform: scale(1.01);
+        cursor: zoom-in;
+      }
+
+      .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    </style>
+  </body>
 </html>
