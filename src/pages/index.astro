@@ -1,6 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, ASSET_URL } from '../consts';
 ---
 
 <!doctype html>
@@ -81,25 +81,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     <div class='asset-grid'>
                       <video autoplay loop muted>
                         <source
-                          src='/videos/sh-home-hero-load.mp4'
+                          src={`${ASSET_URL}/sh-home-hero-load.mp4`}
                           type='video/mp4'
                         />
                       </video>
                       <video autoplay loop muted>
                         <source
-                          src='/videos/sh-homepage-about-hero.mp4'
+                          src={`${ASSET_URL}/sh-homepage-about-hero.mp4`}
                           type='video/mp4'
                         />
                       </video>
                       <video autoplay loop muted>
                         <source
-                          src='/videos/sh-homepage-testimonial.mp4'
+                          src={`${ASSET_URL}/sh-homepage-testimonial.mp4`}
                           type='video/mp4'
                         />
                       </video>
                       <video autoplay loop muted>
                         <source
-                          src='/videos/sh-homepage-footer.mp4'
+                          src={`${ASSET_URL}/videos/sh-homepage-footer.mp4`}
                           type='video/mp4'
                         />
                       </video>
@@ -130,23 +130,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     </p>
                     <div class='asset-grid'>
                       <video autoplay loop muted>
-                        <source src='/videos/sh-plus.mp4' type='video/mp4' />
-                      </video>
-                      <video autoplay loop muted>
                         <source
-                          src='/videos/sh-plus-courses.mp4'
+                          src={`${ASSET_URL}/sh-plus.mp4`}
                           type='video/mp4'
                         />
                       </video>
                       <video autoplay loop muted>
                         <source
-                          src='/videos/sh-plus-explore-section.mp4'
+                          src={`${ASSET_URL}/sh-plus-courses.mp4`}
                           type='video/mp4'
                         />
                       </video>
                       <video autoplay loop muted>
                         <source
-                          src='/videos/sh-plus-quote-section.mp4'
+                          src={`${ASSET_URL}/sh-plus-explore-section.mp4`}
+                          type='video/mp4'
+                        />
+                      </video>
+                      <video autoplay loop muted>
+                        <source
+                          src={`${ASSET_URL}/sh-plus-quote-section.mp4`}
                           type='video/mp4'
                         />
                       </video>
@@ -170,19 +173,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                     <div class='asset-grid'>
                       <video autoplay loop muted>
                         <source
-                          src='/videos/bounties-homepage-1.mp4'
+                          src={`${ASSET_URL}/bounties-homepage-1.mp4`}
                           type='video/mp4'
                         />
                       </video>
                       <video autoplay loop muted>
                         <source
-                          src='/videos/bounties-homepage-2.mp4'
+                          src={`${ASSET_URL}/bounties-homepage-2.mp4`}
                           type='video/mp4'
                         />
                       </video>
                       <video autoplay loop muted>
                         <source
-                          src='/videos/bounties-homepage-3.mp4'
+                          src={`${ASSET_URL}/bounties-homepage-3.mp4`}
                           type='video/mp4'
                         />
                       </video>
