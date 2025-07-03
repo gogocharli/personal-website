@@ -1,0 +1,123 @@
+---
+import { ASSET_URL } from '../consts';
+
+interface Asset {
+  type: 'image' | 'video';
+  url: string;
+}
+
+interface Project {
+  title: string;
+  url?: string;
+  description?: string;
+  assets?: Asset[];
+}
+
+interface Props {
+  companyName: string;
+  timeline: {
+    from: string;
+    to?: string;
+  };
+  role: string | string[];
+  description: string;
+  projects?: Project[];
+}
+
+const { companyName, timeline, role, description, projects } = Astro.props;
+
+const visibleDateFormat = new Intl.DateTimeFormat('en-us', {
+  year: '2-digit',
+  month: 'numeric',
+});
+const datetimeFormat = new Intl.DateTimeFormat('en-us', {
+  year: 'numeric',
+  month: 'numeric',
+});
+
+const dateFrom = visibleDateFormat.format(new Date(timeline.from));
+const datetimeFrom = datetimeFormat.format(new Date(timeline.from));
+
+const dateTo = timeline.to
+  ? visibleDateFormat.format(new Date(timeline.from))
+  : 'current';
+
+const datetimeTo = timeline.to
+  ? datetimeFormat.format(new Date(timeline.to))
+  : datetimeFormat.format(new Date());
+---
+
+<details name='work' data-title={companyName}>
+  <summary role='heading'
+    ><h3>
+      {companyName}
+      <span class='timeline'
+        ><time datetime={datetimeFrom}>{dateFrom}</time>&#8211;<time
+          datetime={datetimeTo}>{dateTo}</time
+        ></span
+      >
+    </h3></summary
+  >
+  <div class='details__content'>
+    {
+      Array.isArray(role) ? (
+        <p>
+          {role[0]}{' '}
+          <span class='sprite'>
+            <img class='mario-sprite' src='/mario-sprite.png' alt='' />
+          </span>
+          <span class='promotion'>{role[1]}</span>
+        </p>
+      ) : (
+        <p>{role}</p>
+      )
+    }
+    <p>
+      {description}
+    </p>
+
+    {
+      projects ? (
+        <section>
+          <h4>Projects</h4>
+          <ul class='project-list'>
+            {projects.map((project) => (
+              <li class='project-item'>
+                <div>
+                  <h5 class='project-title'>
+                    {project.url ? (
+                      <a target='_blank' rel='noopener' href={project.url}>
+                        {project.title}
+                      </a>
+                    ) : (
+                      <span>{project.title}</span>
+                    )}
+                  </h5>
+                  {project.description && (
+                    <p class='project-description'>{project.description}</p>
+                  )}
+                  {project.assets && (
+                    <div class='asset-grid'>
+                      {project.assets.map((asset) =>
+                        asset.type === 'image' ? (
+                          <img src={`/${asset.url}`} />
+                        ) : (
+                          <video autoplay loop muted>
+                            <source
+                              src={`${ASSET_URL}/${asset.url}`}
+                              type='video/mp4'
+                            />
+                          </video>
+                        ),
+                      )}
+                    </div>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null
+    }
+  </div>
+</details>
