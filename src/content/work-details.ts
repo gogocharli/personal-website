@@ -123,14 +123,19 @@ export const Lyncxs = {
                 role in early 2021 to focus on my freelance work.`,
   projects: [
     {
-      title: 'Lyncxs Branding',
-      description: `I designed the Lyncxs branding, including the logo,
-      website, and marketing materials.`,
-    },
-    {
       title: 'Lyncxs Marketing Site',
       description: `I built the Lyncxs marketing site, a site that helps people
                       find and connect with others who share their interests.`,
+      assets: [
+        { type: 'video', url: 'lyncxs-homepage.webm' },
+        { type: 'video', url: 'lyncxs-pricing-page.webm' },
+        { type: 'video', url: 'lyncxs-examples-page.webm' },
+      ],
+    },
+    {
+      title: 'Lyncxs Branding',
+      description: `I designed the Lyncxs branding, including the logo,
+      website, and marketing materials.`,
     },
     {
       title: 'Lyncxs Internal Dashboard and Admin',
@@ -157,7 +162,12 @@ export const Freelance = {
       title: 'Various Websites',
       description: `I built various websites for clients across the globe,
                       working by myself or with international digital agencies.`,
-      assets: [],
+      assets: [
+        { type: 'video', url: 'kalissi-homepage.webm' },
+        { type: 'video', url: 'kalissi-projects.webm' },
+        { type: 'video', url: 'cgr-homepage.webm' },
+        { type: 'video', url: 'liquid-media-group.webm' },
+      ],
     },
   ],
 } satisfies WorkDetails;
