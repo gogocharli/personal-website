@@ -1,5 +1,5 @@
 ---
-import { ASSET_URL } from '../consts';
+import AssetGrid from './AssetGrid.astro';
 
 interface Asset {
   type: 'image' | 'video';
@@ -13,9 +13,10 @@ interface Project {
   assets?: Asset[];
 }
 
-interface Props {
+export interface Props {
   companyName: string;
   timeline: {
+    // date format: MM-DD-YYYY
     from: string;
     to?: string;
   };
@@ -39,7 +40,7 @@ const dateFrom = visibleDateFormat.format(new Date(timeline.from));
 const datetimeFrom = datetimeFormat.format(new Date(timeline.from));
 
 const dateTo = timeline.to
-  ? visibleDateFormat.format(new Date(timeline.from))
+  ? visibleDateFormat.format(new Date(timeline.to))
   : 'current';
 
 const datetimeTo = timeline.to
@@ -47,7 +48,7 @@ const datetimeTo = timeline.to
   : datetimeFormat.format(new Date());
 ---
 
-<details name='work' data-title={companyName}>
+<details name={companyName} open>
   <summary role='heading'
     ><h3>
       {companyName}
@@ -96,22 +97,7 @@ const datetimeTo = timeline.to
                   {project.description && (
                     <p class='project-description'>{project.description}</p>
                   )}
-                  {project.assets && (
-                    <div class='asset-grid'>
-                      {project.assets.map((asset) =>
-                        asset.type === 'image' ? (
-                          <img src={`/${asset.url}`} />
-                        ) : (
-                          <video autoplay loop muted>
-                            <source
-                              src={`${ASSET_URL}/${asset.url}`}
-                              type='video/mp4'
-                            />
-                          </video>
-                        ),
-                      )}
-                    </div>
-                  )}
+                  {project.assets && <AssetGrid assets={project.assets} />}
                 </div>
               </li>
             ))}
@@ -121,3 +107,65 @@ const datetimeTo = timeline.to
     }
   </div>
 </details>
+
+<style>
+  details {
+    font-feature-settings: 'calt';
+  }
+
+  summary h3 {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .timeline {
+    font-variation-settings:
+      'wght' 400,
+      'ital' 1;
+    border: 1px solid currentColor;
+    padding: 0.25em 0.5em;
+    border-radius: 1em;
+    font-size: 0.75em;
+  }
+
+  h3 time {
+    font-feature-settings: 'ss04';
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-variation-settings:
+      'wght' 200,
+      'ital' 0;
+    text-decoration: none;
+    text-align: center;
+    margin-block: 1rem;
+  }
+
+  .promotion {
+    font-variation-settings:
+      'wght' 600,
+      'ital' 0;
+  }
+
+  .mario-sprite {
+    display: inline-block;
+    transform: translateY(-4px);
+    height: 1em;
+  }
+
+  .details__content {
+    margin-bottom: 1.5rem;
+  }
+
+  a[target='_blank']::after {
+    content: '\2197';
+  }
+
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>

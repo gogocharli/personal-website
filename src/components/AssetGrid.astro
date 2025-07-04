@@ -1,0 +1,49 @@
+---
+import { ASSET_URL } from '../consts';
+
+interface Asset {
+  type: 'image' | 'video';
+  url: string;
+}
+
+export interface Props {
+  assets: Asset[];
+}
+
+const { assets } = Astro.props;
+---
+
+<div class='asset-grid'>
+  {
+    assets.map((asset) =>
+      asset.type === 'image' ? (
+        <img src={`/${asset.url}`} />
+      ) : (
+        <video autoplay loop muted>
+          <source src={`${ASSET_URL}/${asset.url}`} type='video/mp4' />
+        </video>
+      ),
+    )
+  }
+</div>
+
+<style>
+  .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .asset-grid video,
+  .asset-grid img {
+    border-radius: 0.25rem;
+    transition: transform 0.25s ease-in-out;
+  }
+
+  .asset-grid video:hover,
+  .asset-grid img:hover {
+    transform: scale(1.01);
+    cursor: zoom-in;
+  }
+</style>
