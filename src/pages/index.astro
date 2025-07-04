@@ -57,6 +57,24 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
               />
             </div>
           </li>
+          <li>
+            <div>
+              <h3>Enigma: A recreation of the Enigma machine</h3>
+              <p>
+                After watching the Imitation Game, I was inspired to build a
+                recreation of the Enigma machine to understand its inner
+                workings and test my knowledge of React.
+                <a
+                  href='https://github.com/gogocharli/enigma'
+                  target='_blank'
+                  rel='noopener'>Enigma</a
+                > is a react-based version of the machine using useReducer to manage
+                the state of the machine. The machine reliably encrypts and decrypts
+                messages with the same settings as the original machine, including
+                the various rotors, reflector, and plugboard.
+              </p>
+            </div>
+          </li>
         </ul>
       </section>
 
@@ -120,6 +138,22 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
     </main>
     <canvas id='shader'></canvas>
     <style>
+      body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      main {
+        max-width: unset;
+        padding: 2em 2em 0;
+        margin: 0;
+      }
+
       .ital {
         font-style: italic;
       }
