@@ -27,17 +27,38 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
         <WorkDetails {...Lyncxs} />
         <WorkDetails {...Freelance} />
       </section>
-      <section>
+      <section class='personal-projects'>
         <h2>I've built</h2>
-        <ul>
-          <li><h3>Raynab: An AI powered extension for YNAB</h3></li>
+        <ul class='personal-projects-list'>
           <li>
-            <h3>
-              Enigma: A recreation of the Enigma Machine using React hooks
-            </h3>
+            <div>
+              <h3>Raynab: An AI powered extension for YNAB</h3>
+              <p>
+                <a
+                  href='https://www.raycast.com/CodetaroMiura/raynab'
+                  target='_blank'
+                  rel='noopener'>Raynab</a
+                > is an AI powered extension for <a
+                  href='https://www.ynab.com/'
+                  target='_blank'
+                  rel='noopener'>YNAB</a
+                >, a personal finance app. It uses AI to help you manage your
+                finances, and to generate reports and insights. I built it using
+                React, TypeScript, and the YNAB API.
+              </p>
+              <AssetGrid
+                assets={[
+                  { type: 'image', url: 'raynab-1.webp' },
+                  { type: 'image', url: 'raynab-2.webp' },
+                  { type: 'image', url: 'raynab-3.webp' },
+                  { type: 'image', url: 'raynab-4.webp' },
+                ]}
+              />
+            </div>
           </li>
         </ul>
       </section>
+
       <section>
         <h2>I love</h2>
         <ul>
@@ -74,7 +95,6 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
         </blockquote>
       </section>
     </main>
-
     <canvas id='shader'></canvas>
     <style>
       .ital {
