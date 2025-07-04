@@ -61,22 +61,61 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
       </section>
 
       <section class='recommendations'>
-        <blockquote
-          cite='https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/'
-        >
-          <p>
-            I would highly recommend Charles to any team looking for a software
-            engineer who goes beyond writing code — someone who truly
-            understands how technology can create delightful, accessible and
-            memorable experiences(<a
-              href='https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/'
-              >&hellip;</a
-            >)
-          </p>
-          <cite>&#8212;Panna Nyeste</cite>, <cite
-            >Head of Design at SuperHi</cite
-          >
-        </blockquote>
+        <h2>What people say about me</h2>
+        <ul class='recommendations-list'>
+          <li>
+            <blockquote
+              cite='https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/'
+            >
+              <p>
+                I would highly recommend Charles to any team looking for a
+                software engineer who goes beyond writing code — someone who
+                truly understands how technology can create delightful,
+                accessible and memorable experiences(<a
+                  href='https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/'
+                  >&hellip;</a
+                >)
+              </p>
+              <cite>&#8212;Panna Nyeste</cite>, <cite
+                >Head of Design at SuperHi</cite
+              >
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>
+                Charles is one of those rare colleagues who provides insightful
+                feedback, champions customer pain points that need product
+                improvement, and is a delight to work with. During my time
+                working with him, he stood out as an empathetic communicator and
+                excellent developer(<a
+                  href='https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/'
+                  >&hellip;</a
+                >)
+              </p>
+              <cite>&#8212;Juliet Jonak</cite>, <cite
+                >Customer Success Manager at Vercel</cite
+              >
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>
+                Charles improved our whole engineering team with his
+                initiatives. He implemented automated checks, high-quality
+                testing, and better development practices. His technical skills,
+                architectural thinking, and team commitment made him a talented
+                developer. He is also one of the rare engineers who thinks about
+                the return on investment and business needs for what they are
+                working on, too(<a
+                  href='https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/'
+                  >&hellip;</a
+                >)
+              </p>
+              <cite>&#8212;Rik Lomas</cite>, <cite>CEO at SuperHi</cite>
+            </blockquote>
+          </li>
+        </ul>
       </section>
     </main>
     <canvas id='shader'></canvas>
@@ -105,11 +144,18 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
           'wght' 600,
           'ital' 0;
       }
+      .recommendations-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        list-style: none;
+      }
 
-      blockquote {
-        margin: 1rem 2rem;
+      .recommendations-list li {
+        margin: 0;
         padding: 1em 2em;
-        border: 2px dashed var(--color-neutral-400);
+        border: 2px dashed var(--color-neutral-300);
+        border-radius: 1rem;
       }
     </style>
   </body>
