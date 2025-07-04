@@ -20,7 +20,7 @@ const { assets } = Astro.props;
         <img src={`/${asset.url}`} />
       ) : (
         <video autoplay loop muted>
-          <source src={`${ASSET_URL}/${asset.url}`} type='video/mp4' />
+          <source src={`${ASSET_URL}/${asset.url}`} type='video/webm' />
         </video>
       ),
     )

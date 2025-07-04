@@ -31,10 +31,10 @@ export const SuperHi = {
                       redesigning core content, the dashboard, and the video
                       player experience.`,
       assets: [
-        { type: 'video', url: 'sh-home-hero-load.mp4' },
-        { type: 'video', url: 'sh-homepage-about-hero.mp4' },
-        { type: 'video', url: 'sh-homepage-testimonial.mp4' },
-        { type: 'video', url: 'sh-homepage-footer.mp4' },
+        { type: 'video', url: 'sh-home-hero-load.webm' },
+        { type: 'video', url: 'sh-homepage-about-hero.webm' },
+        { type: 'video', url: 'sh-homepage-testimonial.webm' },
+        { type: 'video', url: 'sh-homepage-footer.webm' },
       ],
     },
     {
@@ -51,10 +51,10 @@ export const SuperHi = {
                       all targets, attracting over 14,000 visitors and doubling
                       the expected number of applicants.`,
       assets: [
-        { type: 'video', url: 'sh-plus.mp4' },
-        { type: 'video', url: 'sh-plus-courses.mp4' },
-        { type: 'video', url: 'sh-plus-explore-section.mp4' },
-        { type: 'video', url: 'sh-plus-quote-section.mp4' },
+        { type: 'video', url: 'sh-plus.webm' },
+        { type: 'video', url: 'sh-plus-courses.webm' },
+        { type: 'video', url: 'sh-plus-explore-section.webm' },
+        { type: 'video', url: 'sh-plus-quote-section.webm' },
       ],
     },
     {
@@ -66,9 +66,9 @@ export const SuperHi = {
                       would put their project funds in escrow which would then
                       be used to pay creators after their work was completed.`,
       assets: [
-        { type: 'video', url: 'bounties-homepage-1.mp4' },
-        { type: 'video', url: 'bounties-homepage-2.mp4' },
-        { type: 'video', url: 'bounties-homepage-3.mp4' },
+        { type: 'video', url: 'bounties-homepage-1.webm' },
+        { type: 'video', url: 'bounties-homepage-2.webm' },
+        { type: 'video', url: 'bounties-homepage-3.webm' },
       ],
     },
   ],
