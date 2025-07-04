@@ -36,6 +36,7 @@ export const SuperHi = {
         { type: 'video', url: 'sh-homepage-testimonial.webm' },
         { type: 'video', url: 'sh-homepage-footer.webm' },
       ],
+      caption: 'SuperHi Website',
     },
     {
       title: 'SuperHi Plus',
@@ -56,6 +57,7 @@ export const SuperHi = {
         { type: 'video', url: 'sh-plus-explore-section.webm' },
         { type: 'video', url: 'sh-plus-quote-section.webm' },
       ],
+      caption: 'SuperHi Plus Website',
     },
     {
       title: 'Bounties',
@@ -70,6 +72,7 @@ export const SuperHi = {
         { type: 'video', url: 'bounties-homepage-2.webm' },
         { type: 'video', url: 'bounties-homepage-3.webm' },
       ],
+      caption: 'Bounties Website',
     },
   ],
 } satisfies WorkDetails;
@@ -107,19 +110,19 @@ export const Vercel = {
 } satisfies WorkDetails;
 
 export const Lyncxs = {
-  companyName: 'Lyncxs (formerly: C360HD)',
+  companyName: 'Lyncxs',
   timeline: {
     from: '04-01-2020',
     to: '03-01-2021',
   },
   role: 'Technical Co-Founder',
-  description: `I co-founded Lyncxs, a platform that helps people find and
-                connect with others who share their interests. Working as the
-                sole designer and developer in the team, I was responsible for
-                the company's branding and design, as well as building the
-                platform's core features and infrastructure. The platform was
-                used by over 500 businesses in the Greater Montreal Area with
-                over $50k in revenue per month. I left my
+  description: `I co-founded Lyncxs (formerly: C360HD), a platform that helps
+                people find and connect with others who share their interests.
+                Working as the sole designer and developer in the team, I was
+                responsible for the company's branding and design, as well as
+                building the platform's core features and infrastructure. The
+                platform was used by over 500 businesses in the Greater
+                Montreal Area with over $50k in revenue per month. I left my
                 role in early 2021 to focus on my freelance work.`,
   projects: [
     {
@@ -131,16 +134,19 @@ export const Lyncxs = {
         { type: 'video', url: 'lyncxs-pricing-page.webm' },
         { type: 'video', url: 'lyncxs-examples-page.webm' },
       ],
+      caption: 'Lyncxs Website',
     },
     {
       title: 'Lyncxs Branding',
       description: `I designed the Lyncxs branding, including the logo,
       website, and marketing materials.`,
+      caption: 'Lyncxs Branding',
     },
     {
       title: 'Lyncxs Internal Dashboard and Admin',
       description: `I created an internal dashboard and admin for Lyncxs, which
                       helped the team manage new leads, customers, and more.`,
+      caption: 'Lyncxs Internal Dashboard and Admin',
     },
   ],
 } satisfies WorkDetails;
@@ -168,6 +174,7 @@ export const Freelance = {
         { type: 'video', url: 'cgr-homepage.webm' },
         { type: 'video', url: 'liquid-media-group.webm' },
       ],
+      caption: 'Some of my freelance work',
     },
   ],
 } satisfies WorkDetails;

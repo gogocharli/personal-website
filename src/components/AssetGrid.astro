@@ -8,42 +8,62 @@ interface Asset {
 
 export interface Props {
   assets: Asset[];
+  caption?: string;
 }
 
-const { assets } = Astro.props;
+const { assets, caption } = Astro.props;
 ---
 
-<div class='asset-grid'>
-  {
-    assets.map((asset) =>
-      asset.type === 'image' ? (
-        <img src={`/${asset.url}`} />
-      ) : (
-        <video autoplay loop muted>
-          <source src={`${ASSET_URL}/${asset.url}`} type='video/webm' />
-        </video>
-      ),
-    )
-  }
-</div>
+<figure>
+  <div class='asset-grid-container'>
+    {
+      assets.map((asset) =>
+        asset.type === 'image' ? (
+          <img src={`/${asset.url}`} />
+        ) : (
+          <video autoplay loop muted>
+            <source src={`${ASSET_URL}/${asset.url}`} type='video/webm' />
+          </video>
+        ),
+      )
+    }
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
 
 <style>
-  .asset-grid {
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  figcaption {
+    font-size: 0.8rem;
+    color: var(--color-neutral-400);
+    text-align: center;
+    margin-top: 1rem;
+    text-decoration: underline;
+    font-variation-settings:
+      'wght' 400,
+      'ital' 1;
+  }
+
+  .asset-grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     margin-top: 1rem;
   }
 
-  .asset-grid video,
-  .asset-grid img {
+  .asset-grid-container > * {
     border-radius: 0.25rem;
     transition: transform 0.25s ease-in-out;
   }
 
-  .asset-grid video:hover,
-  .asset-grid img:hover {
+  .asset-grid-container > *:hover {
     transform: scale(1.01);
-    cursor: zoom-in;
+    filter: brightness(1.1);
   }
 </style>

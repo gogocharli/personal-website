@@ -11,6 +11,7 @@ interface Project {
   url?: string;
   description?: string;
   assets?: Asset[];
+  caption?: string;
 }
 
 export interface Props {
@@ -97,7 +98,12 @@ const datetimeTo = timeline.to
                   {project.description && (
                     <p class='project-description'>{project.description}</p>
                   )}
-                  {project.assets && <AssetGrid assets={project.assets} />}
+                  {project.assets && (
+                    <AssetGrid
+                      assets={project.assets}
+                      caption={project.caption}
+                    />
+                  )}
                 </div>
               </li>
             ))}
