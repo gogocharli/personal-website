@@ -24,9 +24,17 @@ export interface Props {
   role: string | string[];
   description: string;
   projects?: Project[];
+  isOpen?: boolean;
 }
 
-const { companyName, timeline, role, description, projects } = Astro.props;
+const {
+  companyName,
+  timeline,
+  role,
+  description,
+  projects,
+  isOpen = false,
+} = Astro.props;
 
 const visibleDateFormat = new Intl.DateTimeFormat('en-us', {
   year: '2-digit',
@@ -49,7 +57,7 @@ const datetimeTo = timeline.to
   : datetimeFormat.format(new Date());
 ---
 
-<details name={companyName} open>
+<details name={companyName} open={isOpen}>
   <summary role='heading'
     ><h3>
       {companyName}
