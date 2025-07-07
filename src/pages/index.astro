@@ -141,9 +141,8 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
     </aside>
     <style>
       body {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0;
+        display: flex;
+        flex-direction: row;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -151,16 +150,38 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
       }
 
       main {
+        background-color: var(--color-white);
         max-width: unset;
         padding: 2em 2em 0;
-        margin: 0;
+        margin-block-end: 1em;
+        position: relative;
+        z-index: 1;
       }
 
       aside {
-        position: sticky;
-        top: 0;
-        max-height: 100vh;
-        overflow: hidden;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        height: 100vh;
+      }
+
+      @media (min-width: 768px) {
+        body {
+          display: flex;
+          flex-direction: row;
+        }
+
+        main {
+          flex: 1 1 40%;
+        }
+
+        aside {
+          flex: 1 1 60%;
+          position: sticky;
+          top: 0;
+          max-height: 100vh;
+          overflow: hidden;
+        }
       }
 
       .ital {

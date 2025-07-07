@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import fragmentShaderSource from './_main.frag?raw';
 import vertexShaderSource from './_main.vert?raw';
 
-const canvasElement = document.querySelector('canvas')!;
+const canvasElement = document.querySelector('canvas#shader')!;
 const shaderContainer = document.querySelector('.shader-container')!;
 
 const textureLoader = new THREE.TextureLoader();
@@ -78,11 +78,9 @@ window.addEventListener('resize', () => {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 });
 
-canvasElement.addEventListener('mousemove', (e) => {
+window.addEventListener('mousemove', (e: MouseEvent) => {
   material.uniforms.u_mouse.value.x = e.clientX - sizes.originX;
   material.uniforms.u_mouse.value.y = sizes.height - e.clientY;
-
-  console.log(material.uniforms.u_mouse.value);
 });
 
 const clock = new THREE.Clock();
