@@ -136,7 +136,9 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
         </ul>
       </section>
     </main>
-    <canvas id='shader'></canvas>
+    <aside class='shader-container'>
+      <canvas id='shader'></canvas>
+    </aside>
     <style>
       body {
         display: grid;
@@ -152,6 +154,13 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
         max-width: unset;
         padding: 2em 2em 0;
         margin: 0;
+      }
+
+      aside {
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        overflow: hidden;
       }
 
       .ital {
@@ -192,5 +201,6 @@ import { SuperHi, Vercel, Lyncxs, Freelance } from '../content/work-details';
         border-radius: 1rem;
       }
     </style>
+    <script src='../shader.ts'></script>
   </body>
 </html>
