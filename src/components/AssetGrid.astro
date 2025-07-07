@@ -21,7 +21,7 @@ const { assets, caption } = Astro.props;
         asset.type === 'image' ? (
           <img src={`/${asset.url}`} />
         ) : (
-          <video autoplay loop muted>
+          <video autoplay loop muted playsinline>
             <source src={`${ASSET_URL}/${asset.url}`} type='video/webm' />
           </video>
         ),
