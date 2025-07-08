@@ -7,18 +7,24 @@ export const SuperHi = {
     to: '12-01-2024',
   },
   role: ['Frontend Engineer', 'Senior Software Engineer'],
-  description: `I spent a great couple of years (May 2022 - Dec 2024) at SuperHi,
-              a high-growth startup, climbing from Front-End to Senior Software
-              Developer. I got to build and document a flexible design system
-              that helped keep things consistent across tons of sites. A big
-              focus was also making our own engineering team faster. I helped
+  description: [
+    `I spent almost 3 years of my career (May 2022 - Dec 2024) at SuperHi,
+              a one–of–a–kind education startup with an incredible team and culture.
+              Having written my first few lines of code alongside SuperHi courses,
+              I was excited to participate in the next phase of the company growth.
+             `,
+    ` Initially hired as a Frontend Engineer, I set out to build, document, and iterate on a flexible design system 
+              to handle the growing number of projects we were building while keeping our design language consistent. I also helped
               improve workflows with better testing, logging, and documentation,
-              which even sped up how quickly we could launch new courses (from
-              months to just 2 weeks!). On the Senior side, I played a key role
-              in projects that really moved the needle, boosting revenue by 22%
-              with new sites and improving user retention by 10% by tackling UI
-              issues. Plus, I optimized performance, cutting load times by 40%,
-              and even prototyped fun stuff like AI-powered learning tools.`,
+              which even sped up how quickly we could launch new courses. Through those efforts, we reduced the time taken to build new courses from months to just 2 weeks.
+              We launched 12+ new courses, growing our user base massively and helping as many instructors get paid for their work.
+              `,
+    `Thanks to those contributions, I was quickly promoted to Senior Software Engineer,
+              where I continued to architect solutions and work across the stack,
+              boosting revenue by 22% with proactive changes and improving user retention by 10% by tackling UX issues such a building a new video player.
+              In addition, I optimized our performance metrics, improved our security, built a brand new dashboard,
+              and even prototyped new avenues like AI-powered learning tools.`,
+  ],
   projects: [
     {
       title: 'SuperHi Platform Redesign',
@@ -66,7 +72,8 @@ export const SuperHi = {
                       for freelancers to find creative projects and get paid
                       transparently. Based on Ethereum smart contracts, clients
                       would put their project funds in escrow which would then
-                      be used to pay creators after their work was completed.`,
+                      be used to pay creators after their work was completed. It was my first forray into building for Web3,
+                      and understanding the challenges of creating a user-friendly experience for an audience unfamiliar with the technology.`,
       assets: [
         { type: 'video', url: 'bounties-homepage-1.webm' },
         { type: 'video', url: 'bounties-homepage-2.webm' },
@@ -84,12 +91,11 @@ export const Vercel = {
     to: '05-01-2022',
   },
   role: 'Customer Success Engineer',
-  description: `I was a Customer Success Engineer at Vercel, where I helped
-                customers get the most out of their Vercel projects. I was
-                responsible for onboarding new customers, providing technical
-                support, and ensuring that customers were successful with
-                Vercel. I also worked on the Vercel platform itself, helping to
-                improve the platform's features and infrastructure.`,
+  description: [
+    `In late-2021, I was elated to join Vercel as a Customer Success Engineer, as an hybrid role which allowed me to work both on the customer side and the product side for our excellent CSE team.
+    I was responsible for providing direct technical support to customers of all tiers, be on-call to platform incidents, give technical guidance to our enterprise customers, and add new features to our internal tooling.`,
+    `Working at Vercel was a wonderful learning experience, as I was able to work alongside some ofthe best engineers in the world, in a culture dedicated to shipping fast! I developed a deep understanding of serverless architecture, Next.js, and the building and deployment pipeline necessary to ship at scale.`,
+  ],
   projects: [
     {
       title: 'Vercel Admin',
@@ -97,14 +103,12 @@ export const Vercel = {
                       helping the CSE team, and others, manage customer requests
                       by querying, updating, and deleting projects, deployments,
                       domains, and more. I was responsible for iterating on the
-                      tool's core features and infrastructure to improve our
-                      internal velocity in responding to customer requests.`,
+                      tool's core features and infrastructure, improving our
+                      internal velocity by 50% on recurring tickets by reducing resolution time.`,
     },
     {
       title: 'Vercel Support Page',
-      description: `I built a new support page for Vercel, which was used by
-                      over 100,000 users. I was responsible for building the
-                      tool's core features and infrastructure.`,
+      description: `I built a new support page for Vercel, facilitating the migration of hobby tier customer support to GitHub Discussions. This allowed us to focus on our paid customers, reducing incoming support requests by over 30% and reducing the workload on our CSE team.`,
     },
   ],
 } satisfies WorkDetails;
@@ -116,19 +120,17 @@ export const Lyncxs = {
     to: '03-01-2021',
   },
   role: 'Technical Co-Founder',
-  description: `I co-founded Lyncxs (formerly: C360HD), a platform that helps
-                people find and connect with others who share their interests.
-                Working as the sole designer and developer in the team, I was
-                responsible for the company's branding and design, as well as
+  description: [
+    `A couple months after writing my first few lines of code, I joined hands with a B2B sales veteran to build Lyncxs (formerly: C360HD): A panoramic virutal tour booking platform for retail businesses.`,
+    `I was responsible for the company's branding and design, as well as
                 building the platform's core features and infrastructure. The
                 platform was used by over 500 businesses in the Greater
-                Montreal Area with over $50k in revenue per month. I left my
-                role in early 2021 to focus on my freelance work.`,
+                Montreal Area with over $50k in revenue per month.`,
+  ],
   projects: [
     {
       title: 'Lyncxs Marketing Site',
-      description: `I built the Lyncxs marketing site, a site that helps people
-                      find and connect with others who share their interests.`,
+      description: `I designed and built the Lyncxs marketing site with Next.js, TypeScript, and the Google Maps API. It included multiple features such as a multi-step booking flow, a custom booking calendar. This site was the main touch point between our sales team and potential customers. It improved our conversion rate by over 70% when first introduced compared to our initial MVP.`,
       assets: [
         { type: 'video', url: 'lyncxs-homepage.webm' },
         { type: 'video', url: 'lyncxs-pricing-page.webm' },
@@ -137,32 +139,34 @@ export const Lyncxs = {
       caption: 'Lyncxs Website',
     },
     {
-      title: 'Lyncxs Branding',
-      description: `I designed the Lyncxs branding, including the logo,
-      website, and marketing materials.`,
-      caption: 'Lyncxs Branding',
-    },
-    {
       title: 'Lyncxs Internal Dashboard and Admin',
       description: `I created an internal dashboard and admin for Lyncxs, which
-                      helped the team manage new leads, customers, and more.`,
+                      helped the team automate serveral steps of the service, including booking creation, payment processing, scheduling the calendar of our photographers, automating the virtual tour upload to Google Street View, and more.`,
       caption: 'Lyncxs Internal Dashboard and Admin',
+    },
+    {
+      title: 'Lyncxs Branding',
+      description: `I designed the Lyncxs branding, including the logo,
+      website, and marketing materials used across social media.`,
+      caption: 'Lyncxs Branding',
     },
   ],
 } satisfies WorkDetails;
 
 export const Freelance = {
-  companyName: 'Freelance Creative Technologist',
+  companyName: 'Freelance',
   timeline: {
     from: '01-01-2020',
     to: '05-01-2023',
   },
   role: 'Creative Technologist',
-  description: `I was a freelance creative technologist, helping clients build
+  description: [
+    `I started my web development career as a freelance creative technologist, helping clients build
                 their brands and websites. I worked on creating interactive and
                 accessible websites for clients across the globe, working by
-                myself or with international digital agencies. My work was featured
+                myself or with international digital agencies such as SameSameStudio. My work was featured
                 in multiple design awards, including Typewolf, and SiteInspire.`,
+  ],
   projects: [
     {
       title: 'Various Websites',

@@ -22,7 +22,7 @@ export interface Props {
     to?: string;
   };
   role: string | string[];
-  description: string;
+  description: string[];
   projects?: Project[];
   isOpen?: boolean;
 }
@@ -82,9 +82,7 @@ const datetimeTo = timeline.to
         <p>{role}</p>
       )
     }
-    <p>
-      {description}
-    </p>
+    {description.map((paragraph) => <p>{paragraph}</p>)}
 
     {
       projects ? (
