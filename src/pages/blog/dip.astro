@@ -2,6 +2,8 @@
 import BaseHead from '../../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
+import Header from '../../components/Header.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
 
 const posts = (await getCollection('blog'))
   .filter((post) => post.id.startsWith('dip/'))
@@ -15,17 +17,26 @@ const posts = (await getCollection('blog'))
     <style></style>
   </head>
   <body>
+    <Header />
     <main>
+      <div class='title'>
+        <div class='date'>
+          <FormattedDate date={posts[0].data.pubDate} />
+        </div>
+        <h1>Design In Progress: Table of Contents</h1>
+      </div>
       <section>
-        <ul>
+        <ol>
           {
             posts.map((post) => (
               <li>
                 <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+                <br />
+                <span>{post.data.description}</span>
               </li>
             ))
           }
-        </ul>
+        </ol>
       </section>
     </main>
   </body>
@@ -35,5 +46,29 @@ const posts = (await getCollection('blog'))
   main {
     display: grid;
     place-content: center;
+  }
+  h1 {
+    margin: 0;
+  }
+
+  a:visited {
+    color: currentColor;
+  }
+
+  a:hover,
+  a:focus-visible {
+    background-color: var(--color-neutral-500);
+    color: var(--color-white);
+  }
+
+  .title {
+    margin-bottom: 6rem;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .date {
+    margin-bottom: 0.5em;
+    color: hsl(var(--gray));
   }
 </style>

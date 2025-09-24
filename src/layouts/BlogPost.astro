@@ -6,39 +6,12 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate } = Astro.props;
 ---
 
 <html lang='en'>
   <head>
     <BaseHead title={title} description={description} />
-    <style>
-      main {
-        width: calc(100% - 2em);
-        max-width: 100%;
-        margin: 0 auto;
-      }
-      .prose {
-        max-width: 80ch;
-        margin: auto;
-        color: hsl(var(--gray-dark));
-      }
-      .title {
-        margin-bottom: 6rem;
-        text-align: center;
-        line-height: 1;
-      }
-      .title h1 {
-        margin: 0 0 0.5em 0;
-      }
-      .date {
-        margin-bottom: 0.5em;
-        color: hsl(var(--gray));
-      }
-      .last-updated-on {
-        font-style: italic;
-      }
-    </style>
   </head>
 
   <body>
@@ -65,3 +38,31 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     </main>
   </body>
 </html>
+
+<style>
+  main {
+    width: calc(100% - 2em);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .prose {
+    max-width: 80ch;
+    margin: auto;
+    color: hsl(var(--gray-dark));
+  }
+  .title {
+    margin-bottom: 6rem;
+    text-align: center;
+    line-height: 1;
+  }
+  .title h1 {
+    margin: 0 0 0.5em 0;
+  }
+  .date {
+    margin-bottom: 0.5em;
+    color: hsl(var(--gray));
+  }
+  .last-updated-on {
+    font-style: italic;
+  }
+</style>
