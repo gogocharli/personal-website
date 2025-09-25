@@ -50,6 +50,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
     margin: auto;
     color: hsl(var(--gray-dark));
   }
+
   .title {
     margin-bottom: 6rem;
     text-align: center;
@@ -64,5 +65,20 @@ const { title, description, pubDate, updatedDate } = Astro.props;
   }
   .last-updated-on {
     font-style: italic;
+  }
+</style>
+
+<style is:global>
+  .prose {
+    & a:link {
+      color: inherit;
+    }
+    & a:visited {
+      color: inherit;
+    }
+    & a:hover {
+      background-color: hsl(var(--gray-dark));
+      color: hsl(var(--white));
+    }
   }
 </style>
