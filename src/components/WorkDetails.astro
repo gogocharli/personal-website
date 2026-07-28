@@ -75,14 +75,14 @@ const datetimeTo = timeline.to
     {
       Array.isArray(role) ? (
         <p class="role">
-          {role[0]}{" "}
+          &#10551; {role[0]}{" "}
           <span class="sprite">
             <img class="mario-sprite" src="/mario-sprite.png" alt="" />
           </span>
           <span class="promotion">{role[1]}</span>
         </p>
       ) : (
-        <p class="role">{role}</p>
+        <p class="role"> &#10551; {role}</p>
       )
     }
     {description.map((paragraph) => <p>{paragraph}</p>)}
