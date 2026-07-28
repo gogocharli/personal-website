@@ -4,286 +4,285 @@ import BaseHead from "../components/BaseHead.astro";
 import WorkDetails from "../components/WorkDetails.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import {
-    Clerk,
-    FreelanceDesignEngineer,
-    SuperHi,
-    Vercel,
-    Lyncxs,
-    FreelanceCreativeTechnologist,
+  Clerk,
+  FreelanceDesignEngineer,
+  SuperHi,
+  Vercel,
+  Lyncxs,
+  FreelanceCreativeTechnologist,
 } from "../content/work-details";
 ---
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    </head>
-    <body>
-        <main>
-            <!-- <aside class="work-in-progress">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main>
+      <!-- <aside class="work-in-progress">
                 This website is a work in progress. <a href="/blog/dip"
                     >Take a look at my process</a
                 >.
             </aside> -->
-            <h1>Charles <span class="ital">de Mount</span> Yahouédéou</h1>
-            <p>
-                Hello! I'm Charles, a Design Engineer with 5+ years of
-                experience building polished product, marketing, and
-                developer-facing interfaces for high-growth startups. As a
-                "community-taught" developer, I started my professional career
-                in a microbiology lab, but that scientific curiosity is exactly
-                what drives me to understand how people interact with software.
-                I'm currently a Design Engineer at <a
-                    href="https://clerk.com"
-                    target="_blank"
-                    rel="noopener">Clerk</a
-                >.
-            </p>
-            <p>
-                I'm driven by the desire to build intuitive and delightful user
-                interfaces. This passion has led me through high-growth startups
-                like Clerk, <a
-                    href="https://vercel.com"
-                    target="_blank"
-                    rel="noopener">Vercel</a
-                >, and <a
-                    href="https://superhi.com"
-                    target="_blank"
-                    rel="noopener">SuperHi</a
-                >, where I've focused on turning complex problems into
-                interactive and accessible solutions while earning multiple
-                design awards.
-            </p>
-            <section class="work-details">
-                <h2>I've worked at</h2>
-                <WorkDetails {...Clerk} isOpen />
-                <WorkDetails {...FreelanceDesignEngineer} />
-                <WorkDetails {...SuperHi} />
-                <WorkDetails {...Vercel} />
-                <WorkDetails {...Lyncxs} />
-                <WorkDetails {...FreelanceCreativeTechnologist} />
-            </section>
-            <section class="personal-projects">
-                <h2>I've built</h2>
-                <ul class="personal-projects-list">
-                    <li>
-                        <div>
-                            <h3>Raynab: An AI powered extension for YNAB</h3>
-                            <p>
-                                <a
-                                    href="https://www.raycast.com/CodetaroMiura/raynab"
-                                    target="_blank"
-                                    rel="noopener">Raynab</a
-                                > is an AI powered extension for <a
-                                    href="https://www.ynab.com/"
-                                    target="_blank"
-                                    rel="noopener">YNAB</a
-                                >, a personal finance app. It uses AI to help
-                                you manage your finances, and to generate
-                                reports and insights. I built it using React,
-                                TypeScript, and the YNAB API.
-                            </p>
-                            <AssetGrid
-                                assets={[
-                                    { type: "image", url: "raynab-1.webp" },
-                                    { type: "image", url: "raynab-2.webp" },
-                                    { type: "image", url: "raynab-3.webp" },
-                                    { type: "image", url: "raynab-4.webp" },
-                                ]}
-                                caption="Raynab in action"
-                            />
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <h3>Enigma: A recreation of the Enigma machine</h3>
-                            <p>
-                                After watching the Imitation Game, I was
-                                inspired to build a recreation of the Enigma
-                                machine to understand its inner workings and
-                                test my knowledge of React.
-                                <a
-                                    href="https://github.com/gogocharli/enigma"
-                                    target="_blank"
-                                    rel="noopener">Enigma</a
-                                > is a react-based version of the machine using useReducer
-                                to manage the state of the machine. The machine reliably
-                                encrypts and decrypts messages with the same settings
-                                as the original machine, including the various rotors,
-                                reflector, and plugboard.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </section>
+      <h1>Charles <span class="ital">de Mount</span> Yahouédéou</h1>
+      <p>
+        Hello! I'm Charles, a Design Engineer with 5+ years of experience
+        building polished product, marketing, and developer-facing interfaces
+        for high-growth startups. As a "community-taught" developer, I started
+        my professional career in a microbiology lab, but that scientific
+        curiosity is exactly what drives me to understand how people interact
+        with software. I'm currently a Design Engineer at <a
+          href="https://clerk.com"
+          target="_blank"
+          rel="noopener">Clerk</a
+        >.
+      </p>
+      <p>
+        I'm driven by the desire to build intuitive and delightful user
+        interfaces. This passion has led me through high-growth startups like
+        Clerk, <a href="https://vercel.com" target="_blank" rel="noopener"
+          >Vercel</a
+        >, and <a href="https://superhi.com" target="_blank" rel="noopener"
+          >SuperHi</a
+        >, where I've focused on turning complex problems into interactive and
+        accessible solutions while earning multiple design awards.
+      </p>
+      <section class="work-details">
+        <h2>Career</h2>
+        <WorkDetails {...Clerk} isOpen />
+        <WorkDetails {...FreelanceDesignEngineer} />
+        <WorkDetails {...SuperHi} />
+        <WorkDetails {...Vercel} />
+        <WorkDetails {...Lyncxs} />
+        <WorkDetails {...FreelanceCreativeTechnologist} />
+      </section>
+      <section class="personal-projects">
+        <h2>Extra</h2>
+        <ul class="personal-projects-list">
+          <li>
+            <div>
+              <h3>Raynab: An AI powered extension for YNAB</h3>
+              <p>
+                <a
+                  href="https://www.raycast.com/CodetaroMiura/raynab"
+                  target="_blank"
+                  rel="noopener">Raynab</a
+                > is an AI powered extension for <a
+                  href="https://www.ynab.com/"
+                  target="_blank"
+                  rel="noopener">YNAB</a
+                >, a personal finance app. It uses AI to help you manage your
+                finances, and to generate reports and insights. I built it using
+                React, TypeScript, and the YNAB API.
+              </p>
+              <AssetGrid
+                assets={[
+                  { type: "image", url: "raynab-1.webp" },
+                  { type: "image", url: "raynab-2.webp" },
+                  { type: "image", url: "raynab-3.webp" },
+                  { type: "image", url: "raynab-4.webp" },
+                ]}
+                caption="Raynab in action"
+              />
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Enigma: A recreation of the Enigma machine</h3>
+              <p>
+                After watching the Imitation Game, I was inspired to build a
+                recreation of the Enigma machine to understand its inner
+                workings and test my knowledge of React.
+                <a
+                  href="https://github.com/gogocharli/enigma"
+                  target="_blank"
+                  rel="noopener">Enigma</a
+                > is a react-based version of the machine using useReducer to manage
+                the state of the machine. The machine reliably encrypts and decrypts
+                messages with the same settings as the original machine, including
+                the various rotors, reflector, and plugboard.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-            <section class="recommendations">
-                <h2>What people say about me</h2>
-                <ul class="recommendations-list">
-                    <li>
-                        <blockquote
-                            cite="https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/"
-                        >
-                            <p>
-                                I would highly recommend Charles to any team
-                                looking for a software engineer who goes beyond
-                                writing code — someone who truly understands how
-                                technology can create delightful, accessible and
-                                memorable experiences(<a
-                                    href="https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/"
-                                    >&hellip;</a
-                                >)
-                            </p>
-                            <cite>&#8212;Panna Nyeste</cite>, <cite
-                                >Head of Design at SuperHi</cite
-                            >
-                        </blockquote>
-                    </li>
-                    <li>
-                        <blockquote>
-                            <p>
-                                Charles is one of those rare colleagues who
-                                provides insightful feedback, champions customer
-                                pain points that need product improvement, and
-                                is a delight to work with. During my time
-                                working with him, he stood out as an empathetic
-                                communicator and excellent developer(<a
-                                    href="https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/"
-                                    >&hellip;</a
-                                >)
-                            </p>
-                            <cite>&#8212;Juliet Jonak</cite>, <cite
-                                >Customer Success Manager at Vercel</cite
-                            >
-                        </blockquote>
-                    </li>
-                    <li>
-                        <blockquote>
-                            <p>
-                                Charles improved our whole engineering team with
-                                his initiatives. He implemented automated
-                                checks, high-quality testing, and better
-                                development practices. His technical skills,
-                                architectural thinking, and team commitment made
-                                him a talented developer. He is also one of the
-                                rare engineers who thinks about the return on
-                                investment and business needs for what they are
-                                working on, too(<a
-                                    href="https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/"
-                                    >&hellip;</a
-                                >)
-                            </p>
-                            <cite>&#8212;Rik Lomas</cite>, <cite
-                                >CEO at SuperHi</cite
-                            >
-                        </blockquote>
-                    </li>
-                </ul>
-            </section>
-        </main>
-        <aside class="shader-container">
-            <canvas id="shader"></canvas>
-        </aside>
-        <style>
-            body {
-                display: flex;
-                flex-direction: row;
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-            }
+      <section class="recommendations">
+        <h2>Hearsay</h2>
+        <ul class="recommendations-list">
+          <li>
+            <blockquote
+              cite="https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/"
+            >
+              <p>
+                I would highly recommend Charles to any team looking for a
+                software engineer who goes beyond writing code — someone who
+                truly understands how technology can create delightful,
+                accessible and memorable experiences(<a
+                  href="https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/"
+                  >&hellip;</a
+                >)
+              </p>
+              <cite>&#8212;Panna Nyeste</cite>, <cite
+                >Head of Design at SuperHi</cite
+              >
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>
+                Charles is one of those rare colleagues who provides insightful
+                feedback, champions customer pain points that need product
+                improvement, and is a delight to work with. During my time
+                working with him, he stood out as an empathetic communicator and
+                excellent developer(<a
+                  href="https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/"
+                  >&hellip;</a
+                >)
+              </p>
+              <cite>&#8212;Juliet Jonak</cite>, <cite
+                >Customer Success Manager at Vercel</cite
+              >
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <p>
+                Charles improved our whole engineering team with his
+                initiatives. He implemented automated checks, high-quality
+                testing, and better development practices. His technical skills,
+                architectural thinking, and team commitment made him a talented
+                developer. He is also one of the rare engineers who thinks about
+                the return on investment and business needs for what they are
+                working on, too(<a
+                  href="https://www.linkedin.com/in/charles-yahouedeou/details/recommendations/"
+                  >&hellip;</a
+                >)
+              </p>
+              <cite>&#8212;Rik Lomas</cite>, <cite>CEO at SuperHi</cite>
+            </blockquote>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <aside class="shader-container">
+      <canvas id="shader"></canvas>
+    </aside>
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-            main {
-                background-color: var(--color-white);
-                max-width: unset;
-                padding: 2em 2em 0;
-                margin-block-end: 1em;
-                position: relative;
-                z-index: 1;
-            }
+      main {
+        background-color: var(--color-white);
+        max-width: unset;
+        padding: 2em 2em 0;
+        margin-block-end: 1em;
+        position: relative;
+        z-index: 1;
+      }
 
-            .work-in-progress {
-                background-color: var(--color-jasmine-200);
-                padding: 1rem;
-                border-radius: 0.25rem;
-            }
-            .work-in-progress a {
-                color: var(--color-black);
-            }
-            .work-in-progress a:hover {
-                background-color: inherit;
-            }
+      .work-in-progress {
+        background-color: var(--color-jasmine-200);
+        padding: 1rem;
+        border-radius: 0.25rem;
+      }
+      .work-in-progress a {
+        color: var(--color-black);
+      }
+      .work-in-progress a:hover {
+        background-color: inherit;
+      }
 
-            .shader-container {
-                position: absolute;
-                inset: 0;
-                z-index: -1;
-                height: 100vh;
-            }
-            @media (min-width: 768px) {
-                body {
-                    display: flex;
-                    flex-direction: row;
-                }
+      .shader-container {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        height: 100vh;
+      }
+      @media (min-width: 768px) {
+        body {
+          display: flex;
+          flex-direction: row;
+        }
 
-                main {
-                    flex: 1 1 40%;
-                }
+        main {
+          flex: 1 1 40%;
+        }
 
-                .shader-container {
-                    flex: 1 1 60%;
-                    position: sticky;
-                    top: 0;
-                    max-height: 100vh;
-                    overflow: hidden;
-                }
-            }
+        .shader-container {
+          flex: 1 1 60%;
+          position: sticky;
+          top: 0;
+          max-height: 100vh;
+          overflow: hidden;
+        }
+      }
 
-            .ital {
-                font-style: italic;
-            }
+      .ital {
+        font-style: italic;
+      }
 
-            .circled {
-                font-feature-settings: "ss03";
-                font-size: 1.6rem;
-                color: var(--color-amethyst-400);
-                line-height: 1;
-            }
+      .circled {
+        font-feature-settings: "ss03";
+        font-size: 1.6rem;
+        color: var(--color-amethyst-400);
+        line-height: 1;
+      }
 
-            h2 {
-                /* font-size: 1.25rem; */
-                font-variation-settings:
-                    "wght" 400,
-                    "ital" 1;
-                text-decoration: underline;
-            }
+      h2 {
+        /* font-size: 1.25rem; */
+        font-variation-settings:
+          "wght" 300,
+          "ital" 0;
+        /*text-decoration: underline;*/
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.25rem;
+        color: var(--color-neutral-300);
+        margin-block: 2rem;
 
-            h3 {
-                font-variation-settings:
-                    "wght" 600,
-                    "ital" 0;
-            }
+        &::before,
+        &::after {
+          content: "";
+          flex: 1 1 100%;
+          height: 1px;
+          background-color: var(--color-neutral-100);
+        }
+      }
 
-            .personal-projects-list {
-                display: flex;
-                flex-direction: column;
-                gap: 1.25rem;
-            }
-            .recommendations-list {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                list-style: none;
-            }
+      h3 {
+        font-variation-settings:
+          "wght" 600,
+          "ital" 0;
+      }
 
-            .recommendations-list li {
-                margin: 0;
-                padding: 1em 2em;
-                border: 2px dashed var(--color-neutral-300);
-                border-radius: 1rem;
-            }
-        </style>
-        <script src="../shader.ts"></script>
-    </body>
+      .personal-projects-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .recommendations-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        list-style: none;
+      }
+
+      .recommendations-list li {
+        margin: 0;
+        padding: 1em 2em;
+        border: 2px dashed var(--color-neutral-300);
+        border-radius: 1rem;
+      }
+    </style>
+    <script src="../shader.ts"></script>
+  </body>
 </html>

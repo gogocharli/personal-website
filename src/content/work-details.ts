@@ -4,6 +4,7 @@ export const Clerk = {
   companyName: 'Clerk',
   timeline: {
     from: '03-01-2026',
+    background: 'jasmine-100',
   },
   role: 'Design Engineer',
   description: [
@@ -47,6 +48,7 @@ export const FreelanceDesignEngineer = {
   timeline: {
     from: '03-01-2025',
     to: '02-01-2026',
+    background: 'cyan-200',
   },
   role: 'Design Engineer',
   description: [
@@ -77,6 +79,7 @@ export const SuperHi = {
   timeline: {
     from: '05-01-2022',
     to: '12-01-2024',
+    background: 'cobalt-100',
   },
   role: [
     'Frontend Developer',
@@ -164,6 +167,7 @@ export const Vercel = {
   timeline: {
     from: '09-01-2021',
     to: '05-01-2022',
+    background: 'peach'
   },
   role: 'Customer Success Engineer',
   description: [
@@ -193,6 +197,7 @@ export const Lyncxs = {
   timeline: {
     from: '04-01-2020',
     to: '08-01-2021',
+    background: 'amethyst-100'
   },
   role: 'Co-Founder & Lead Product Engineer',
   description: [
@@ -233,6 +238,7 @@ export const FreelanceCreativeTechnologist = {
   timeline: {
     from: '01-01-2020',
     to: '05-01-2023',
+    background: 'magenta-100',
   },
   role: 'Creative Technologist',
   description: [

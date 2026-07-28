@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'MDIO';
+  src: url('/fonts/MDIO-VF.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MDUI';
+  src: url('/fonts/MDUI-VF.woff2') format('woff2');
+  font-display: swap;
+}
+
 :root {
   --color-white: #fcfaf7;
   --color-neutral-100: #eee7ea;
@@ -46,6 +58,8 @@
   --gray-gradient: hsl(var(--gray-light) / 50%), var(--color-white);
   --box-shadow: 0 2px 6px hsl(var(--gray) / 25%),
     0 8px 24px hsl(var(--gray) / 33%), 0 16px 32px hsl(var(--gray) / 33%);
+  --font-sans: 'MDUI', sans-serif;
+  --font-mono: 'MDIO', monospace;
 }
 
 /* This css reset is based on previous resets (plus-ui, bounties-ui) and */
@@ -211,14 +225,8 @@ h6 {
   }
 }
 
-@font-face {
-  font-family: 'MDIO';
-  src: url('/fonts/MDIO-VF.woff2') format('woff2');
-  font-display: swap;
-}
-
 body {
-  font-family: 'MDIO', sans-serif;
+  font-family: var(--font-sans);
   margin: 0;
   padding: 0;
   text-align: left;
@@ -230,6 +238,7 @@ body {
   font-variation-settings: 'wght' 400, 'ital' 0;
   line-height: 1.5;
 }
+
 main {
   width: 720px;
   max-width: calc(100% - 2em);

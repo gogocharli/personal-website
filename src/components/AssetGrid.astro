@@ -23,7 +23,13 @@ const { assets, caption } = Astro.props;
                 asset.type === "image" ? (
                     <img loading="lazy" src={`/${asset.url}`} />
                 ) : (
-                    <video autoplay loop muted playsinline>
+                    <video
+                        loop
+                        muted
+                        playsinline
+                        preload="metadata"
+                        data-lazy-video
+                    >
                         <source
                             src={`${ASSET_URL}/${asset.url}`}
                             type="video/webm"
@@ -35,6 +41,34 @@ const { assets, caption } = Astro.props;
     </div>
     {caption && <figcaption>{caption}</figcaption>}
 </figure>
+
+<script>
+    // Play looped videos only while they're in view (and pause them otherwise)
+    // to avoid many videos decoding at once. This <script> is bundled once even
+    // though AssetGrid renders many times, so a single observer covers the page.
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const videos = document.querySelectorAll<HTMLVideoElement>(
+        "video[data-lazy-video]",
+    );
+
+    if (!reduce) {
+        const io = new IntersectionObserver(
+            (entries) => {
+                for (const entry of entries) {
+                    const video = entry.target as HTMLVideoElement;
+                    if (entry.isIntersecting) {
+                        video.play().catch(() => {});
+                    } else {
+                        video.pause();
+                    }
+                }
+            },
+            { threshold: 0.25 },
+        );
+
+        videos.forEach((video) => io.observe(video));
+    }
+</script>
 
 <style>
     figure {

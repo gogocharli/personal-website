@@ -20,6 +20,7 @@ export interface Props {
     // date format: MM-DD-YYYY
     from: string;
     to?: string;
+    background?: string;
   };
   role: string | string[];
   description: string[];
@@ -61,7 +62,9 @@ const datetimeTo = timeline.to
   <summary role="heading"
     ><h3>
       {companyName}
-      <span class="timeline"
+      <span
+        class="timeline"
+        style={{ "--background": `var(--color-${timeline.background})` }}
         ><time datetime={datetimeFrom}>{dateFrom}</time>&#8211;<time
           datetime={datetimeTo}>{dateTo}</time
         ></span
@@ -71,7 +74,7 @@ const datetimeTo = timeline.to
   <div class="details__content">
     {
       Array.isArray(role) ? (
-        <p>
+        <p class="role">
           {role[0]}{" "}
           <span class="sprite">
             <img class="mario-sprite" src="/mario-sprite.png" alt="" />
@@ -79,7 +82,7 @@ const datetimeTo = timeline.to
           <span class="promotion">{role[1]}</span>
         </p>
       ) : (
-        <p>{role}</p>
+        <p class="role">{role}</p>
       )
     }
     {description.map((paragraph) => <p>{paragraph}</p>)}
@@ -129,9 +132,12 @@ const datetimeTo = timeline.to
     display: inline-flex;
     gap: 0.5rem;
     align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 1rem);
   }
 
   .timeline {
+    font-family: "MDIO", monospace;
     font-variation-settings:
       "wght" 400,
       "ital" 1;
@@ -139,6 +145,7 @@ const datetimeTo = timeline.to
     padding: 0.25em 0.5em;
     border-radius: 1em;
     font-size: 0.75em;
+    background-color: var(--background, transparent);
   }
 
   h3 time {
@@ -153,6 +160,10 @@ const datetimeTo = timeline.to
     text-decoration: none;
     text-align: center;
     margin-block: 1rem;
+  }
+
+  .role {
+    font-family: var(--font-mono);
   }
 
   .promotion {
