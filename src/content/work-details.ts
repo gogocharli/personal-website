@@ -1,19 +1,83 @@
 import type { Props as WorkDetails } from '../components/WorkDetails.astro';
 
+export const Clerk = {
+  companyName: 'Clerk',
+  timeline: {
+    from: '03-01-2026',
+  },
+  role: 'Design Engineer',
+  description: [
+    `In early 2026, I joined Clerk, the authentication and user management platform for developers, as a Design Engineer.
+              After years of building for developer-facing products, I was thrilled to shape how developers first meet Clerk,
+              from the marketing site to the product surfaces they use every day.`,
+    `I shipped new designs for 2 product landing pages and scaled them into a composable architecture now reused across 4 more pages,
+              improving performance, accessibility, and developer experience along the way.`,
+    `Beyond the pages themselves, I designed and built interactive component demos that mirror real Clerk flows, making our product
+              education and component storytelling far more tangible.`,
+  ],
+  // projects: [
+  //   {
+  //     title: 'Composable Landing-Page System',
+  //     description: `I turned two bespoke landing-page designs into a composable, tokenized architecture reused across six pages in total.
+  //                     By consolidating component primitives and customization patterns spread across 15 pages, I improved performance,
+  //                     accessibility, and brand consistency while making the whole system easier for the team to maintain and extend.`,
+  //   },
+  //   {
+  //     title: 'Interactive Component Demos',
+  //     description: `I designed and built interactive demos that mirror real Clerk authentication flows, turning static documentation into
+  //                     hands-on component storytelling. These demos improved product education for developers and gave designers a shared vocabulary
+  //                     for how our components behave in production.`,
+  //   },
+  // ],
+} satisfies WorkDetails;
+
+export const FreelanceDesignEngineer = {
+  companyName: 'Freelance',
+  timeline: {
+    from: '03-01-2025',
+    to: '02-01-2026',
+  },
+  role: 'Design Engineer',
+  description: [
+    `After my time at SuperHi, I spent a year as an independent Design Engineer, partnering with early-stage startups and agencies
+              to ship polished, production-ready interfaces. It was a chance to work across very different products while staying close to both the design
+              and the code.`,
+    `I redesigned Pydantic Logfire's navigation and information architecture, shipping a new sidebar and motion conventions that made it
+              far easier to find your way around complex observability setups. Alongside that, I delivered motion-first landing pages for agency clients
+              launching around key funding milestones.`,
+  ],
+  // projects: [
+  //   {
+  //     title: 'Pydantic Logfire Navigation Redesign',
+  //     description: `I reworked the navigation and information architecture for Pydantic Logfire, an observability platform for Python developers.
+  //                     The new sidebar and motion conventions improved wayfinding across complex, data-dense setups, helping developers stay oriented as their
+  //                     projects grew.`,
+  //   },
+  //   {
+  //     title: 'Agency Landing Pages',
+  //     description: `I built motion-first landing pages for agency clients launching around key funding milestones, focusing on animation,
+  //                     performance, and responsive polish to make each launch land with impact.`,
+  //   },
+  // ],
+} satisfies WorkDetails;
+
 export const SuperHi = {
   companyName: 'SuperHi',
   timeline: {
     from: '05-01-2022',
     to: '12-01-2024',
   },
-  role: ['Frontend Engineer', 'Senior Software Engineer'],
+  role: [
+    'Frontend Developer',
+    ' Senior Software Developer, Frontend & Design Systems',
+  ],
   description: [
     `I spent almost 3 years of my career (May 2022 - Dec 2024) at SuperHi,
               a one–of–a–kind education startup with an incredible team and culture.
               Having written my first few lines of code alongside SuperHi courses,
               I was excited to participate in the next phase of the company growth.
              `,
-    ` Initially hired as a Frontend Engineer, I set out to build, document, and iterate on a flexible design system 
+    ` Initially hired as a Frontend Engineer, I set out to build, document, and iterate on a flexible design system
               to handle the growing number of projects we were building while keeping our design language consistent. I also helped
               improve workflows with better testing, logging, and documentation,
               which even sped up how quickly we could launch new courses. Through those efforts, we reduced the time taken to build new courses from months to just 2 weeks.
@@ -92,9 +156,9 @@ export const Vercel = {
   },
   role: 'Customer Success Engineer',
   description: [
-    `In late-2021, I was elated to join Vercel as a Customer Success Engineer, as an hybrid role which allowed me to work both on the customer side and the product side for our excellent CSE team.
-    I was responsible for providing direct technical support to customers of all tiers, be on-call to platform incidents, give technical guidance to our enterprise customers, and add new features to our internal tooling.`,
-    `Working at Vercel was a wonderful learning experience, as I was able to work alongside some ofthe best engineers in the world, in a culture dedicated to shipping fast! I developed a deep understanding of serverless architecture, Next.js, and the building and deployment pipeline necessary to ship at scale.`,
+    `In late-2021, I was elated to join Vercel as a Customer Success Engineer, a hybrid role which allowed me to work both on the customer side and the product side for our excellent support engineering team.
+    I was responsible for providing direct technical support to customers of all tiers, being on-call for platform incidents, giving technical guidance to our enterprise customers, and adding new features to our internal tooling.`,
+    `Working at Vercel was a wonderful learning experience, as I was able to work alongside some of the best engineers in the world, in a culture dedicated to shipping fast! I developed a deep understanding of serverless architecture, Next.js, and the building and deployment pipeline necessary to ship at scale.`,
   ],
   projects: [
     {
@@ -117,15 +181,15 @@ export const Lyncxs = {
   companyName: 'Lyncxs',
   timeline: {
     from: '04-01-2020',
-    to: '03-01-2021',
+    to: '08-01-2021',
   },
-  role: 'Technical Co-Founder',
+  role: 'Co-Founder & Lead Product Engineer',
   description: [
     `A couple months after writing my first few lines of code, I joined hands with a B2B sales veteran to build Lyncxs (formerly: C360HD): A panoramic virutal tour booking platform for retail businesses.`,
     `I was responsible for the company's branding and design, as well as
-                building the platform's core features and infrastructure. The
-                platform was used by over 500 businesses in the Greater
-                Montreal Area with over $50k in revenue per month.`,
+                building the platform's core features and infrastructure. We launched to
+                over 100 businesses in Montreal, automating operations for 40+ agents
+                and generating $50K in revenue within our first 12 weeks.`,
   ],
   projects: [
     {
@@ -153,7 +217,7 @@ export const Lyncxs = {
   ],
 } satisfies WorkDetails;
 
-export const Freelance = {
+export const FreelanceCreativeTechnologist = {
   companyName: 'Freelance',
   timeline: {
     from: '01-01-2020',
