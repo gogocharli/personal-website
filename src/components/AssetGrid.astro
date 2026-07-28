@@ -1,69 +1,74 @@
 ---
-import { ASSET_URL } from '../consts';
+import { ASSET_URL } from "../consts";
 
 interface Asset {
-  type: 'image' | 'video';
-  url: string;
+    type: "image" | "video";
+
+    // TODO: add a filename field so that we can use the asset directly from the assets directory
+    url: string;
 }
 
 export interface Props {
-  assets: Asset[];
-  caption?: string;
+    assets: Asset[];
+    caption?: string;
 }
 
 const { assets, caption } = Astro.props;
 ---
 
 <figure>
-  <div class='asset-grid-container'>
-    {
-      assets.map((asset) =>
-        asset.type === 'image' ? (
-          <img loading='lazy' src={`/${asset.url}`} />
-        ) : (
-          <video autoplay loop muted playsinline>
-            <source src={`${ASSET_URL}/${asset.url}`} type='video/webm' />
-          </video>
-        ),
-      )
-    }
-  </div>
-  {caption && <figcaption>{caption}</figcaption>}
+    <div class="asset-grid-container">
+        {
+            assets.map((asset) =>
+                asset.type === "image" ? (
+                    <img loading="lazy" src={`/${asset.url}`} />
+                ) : (
+                    <video autoplay loop muted playsinline>
+                        <source
+                            src={`${ASSET_URL}/${asset.url}`}
+                            type="video/webm"
+                        />
+                    </video>
+                ),
+            )
+        }
+    </div>
+    {caption && <figcaption>{caption}</figcaption>}
 </figure>
 
 <style>
-  figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-block-end: 0.5rem;
-  }
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-block-end: 0.5rem;
+    }
 
-  figcaption {
-    font-size: 0.8rem;
-    color: var(--color-neutral-400);
-    text-align: center;
-    margin-top: 0.5rem;
-    text-decoration: underline;
-    font-variation-settings:
-      'wght' 400,
-      'ital' 1;
-  }
+    figcaption {
+        font-size: 0.8rem;
+        color: var(--color-neutral-400);
+        text-align: center;
+        margin-top: 0.5rem;
+        text-decoration: underline;
+        font-variation-settings:
+            "wght" 400,
+            "ital" 1;
+    }
 
-  .asset-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 0.5rem;
-  }
+    .asset-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 0.5rem;
+    }
 
-  .asset-grid-container > * {
-    border-radius: 0.25rem;
-    transition: transform 0.25s ease-in-out;
-  }
+    .asset-grid-container > * {
+        border-radius: 0.25rem;
+        transition: transform 0.25s ease-in-out;
+    }
 
-  .asset-grid-container > *:hover {
-    transform: scale(1.01);
-    filter: brightness(1.1);
-  }
+    .asset-grid-container > *:hover {
+        transform: scale(1.01);
+        filter: brightness(1.1);
+    }
 </style>

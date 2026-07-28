@@ -15,20 +15,31 @@ export const Clerk = {
     `Beyond the pages themselves, I designed and built interactive component demos that mirror real Clerk flows, making our product
               education and component storytelling far more tangible.`,
   ],
-  // projects: [
-  //   {
-  //     title: 'Composable Landing-Page System',
-  //     description: `I turned two bespoke landing-page designs into a composable, tokenized architecture reused across six pages in total.
-  //                     By consolidating component primitives and customization patterns spread across 15 pages, I improved performance,
-  //                     accessibility, and brand consistency while making the whole system easier for the team to maintain and extend.`,
-  //   },
-  //   {
-  //     title: 'Interactive Component Demos',
-  //     description: `I designed and built interactive demos that mirror real Clerk authentication flows, turning static documentation into
-  //                     hands-on component storytelling. These demos improved product education for developers and gave designers a shared vocabulary
-  //                     for how our components behave in production.`,
-  //   },
-  // ],
+  projects: [
+    {
+      title: 'Product Landing Pages',
+      url: 'https://clerk.com/components/checkout-button',
+      description: ``,
+      assets: [
+        {
+          type: 'video',
+          url: 'clerk-b2b-auth.webm',
+        },
+        {
+          type: 'video',
+          url: 'clerk-checkout-button.webm',
+        },
+        {
+          type: 'video',
+          url: 'clerk-org-profile.webm',
+        },
+        {
+          type: 'video',
+          url: 'clerk-user-auth.webm',
+        },
+      ],
+    },
+  ],
 } satisfies WorkDetails;
 
 export const FreelanceDesignEngineer = {
