@@ -250,7 +250,8 @@ h6 {
 h1 {
   font-size: 1.25rem;
   font-variation-settings: 'wght' 600;
-  margin-block: 2rem;
+  margin-block-start: 0rem;
+  margin-block-end: 2rem;
 }
 h2 {
   font-size: 1.15rem;
