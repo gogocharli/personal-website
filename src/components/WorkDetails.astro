@@ -128,12 +128,33 @@ const datetimeTo = timeline.to
     font-feature-settings: "calt";
   }
 
+  summary {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    font-family: var(--font-mono);
+
+    &::before {
+      color: var(--color-neutral-500);
+      content: "\2192";
+    }
+
+    [open] &::before {
+      content: "\2193";
+    }
+  }
+
+  :is(::-webkit-details-marker) {
+    display: none;
+  }
+
   summary h3 {
-    display: inline-flex;
-    gap: 0.5rem;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(100% - 1rem);
+    font-family: var(--font-sans);
+    flex: 1;
   }
 
   .timeline {
@@ -164,6 +185,7 @@ const datetimeTo = timeline.to
 
   .role {
     font-family: var(--font-mono);
+    /*margin-left: 1.5ch;*/
   }
 
   .promotion {
