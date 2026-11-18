@@ -1,26 +1,46 @@
 import type { Props as WorkDetails } from '../components/WorkDetails.astro';
 
+export const Dialogue = {
+  companyName: 'Dialogue',
+  timeline: {
+    from: '09-01-2026',
+    background: 'cyan-100',
+  },
+  role: 'Senior Design Engineer',
+  description: [
+    `In September 2026, I joined Dialogue, a virtual healthcare platform, as its first design engineer. My mandate is to make
+              the design system the default way product squads build the member app.`,
+    `I started by auditing how design and engineering work together and mapping the gaps between them. From there, I shipped an
+              early design system in React Native, with base components and consolidated tokens, and wrote the RFC for how it rolls out
+              and how squads contribute to it. The first product squad adopts it in Q1 2027.`,
+  ],
+} satisfies WorkDetails;
+
 export const Clerk = {
   companyName: 'Clerk',
   timeline: {
     from: '03-01-2026',
+    to: '07-01-2026',
     background: 'jasmine-100',
   },
   role: 'Design Engineer',
   description: [
-    `In early 2026, I joined Clerk, the authentication and user management platform for developers, as a Design Engineer.
-              After years of building for developer-facing products, I was thrilled to shape how developers first meet Clerk,
-              from the marketing site to the product surfaces they use every day.`,
-    `I shipped new designs for 2 product landing pages and scaled them into a composable architecture now reused across 4 more pages,
-              improving performance, accessibility, and developer experience along the way.`,
-    `Beyond the pages themselves, I designed and built interactive component demos that mirror real Clerk flows, making our product
-              education and component storytelling far more tangible.`,
+    `In early 2026, I joined Clerk, the authentication and user management platform for developers, as a Design Engineer
+              on the marketing design team, shaping how developers first meet Clerk.`,
+    `With one other design engineer, I rebuilt the architecture behind Clerk's marketing pages into composable building blocks
+              that both designers and AI agents could read and assemble. Page build time went from 1–2 weeks to 2–3 days, and within
+              a month, 4 designers who had never contributed code were shipping production changes themselves, kept safe by CI checks,
+              AI code review, and agent rules we tightened every time they went wrong.`,
+    `Along the way, I tracked down a crash loop on animation-heavy pages in mobile Safari to a memory problem, and fixed it by
+              moving scroll animations off the JavaScript thread onto CSS scroll-driven animations.`,
   ],
   projects: [
     {
-      title: 'Product Landing Pages',
+      title: 'Interactive component demos',
       url: 'https://clerk.com/components/checkout-button',
-      description: ``,
+      description: `Each component page opens with a demo that plays out a real Clerk flow, so developers learn the product by
+                      watching it work. The cursor moves the way a hand does rather than in straight lines, and every demo is
+                      built on an inspectable timeline, so timing can be tuned directly instead of replaying the whole sequence.`,
       assets: [
         {
           type: 'video',
